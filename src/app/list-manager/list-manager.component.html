@@ -2,8 +2,21 @@
   <app-input-button-unit (submit)="addItem($event)"></app-input-button-unit>
 
   <ul>
-    <li *ngFor="let todoItem of todoList">
+    <li class="todo-line" *ngFor="let todoItem of todoList; let i = index">
       <app-todo-item [item]="todoItem"></app-todo-item>
+      <div class="actions">
+        <div class="delete">
+          <button (click)="removeItem(i)">
+            <div id="cross"></div>
+          </button>
+        </div>
+        <div class="todo">
+          <label class="container">
+            <input type="checkbox">
+            <div class="checkmark"></div>
+          </label>
+        </div>
+      </div>
     </li>
   </ul>
 </div>

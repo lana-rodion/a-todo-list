@@ -23,4 +23,8 @@ export class ListManagerComponent {
   addItem(title: string): void {
     this.todoList.push({ title });
   }
+
+  removeItem(index: number) {
+    this.todoList.splice(index, 1);
+  }
 }
