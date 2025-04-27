@@ -8,7 +8,8 @@ import { Component, EventEmitter, Output } from '@angular/core';
 })
 export class InputButtonUnitComponent {
   @Output() submit: EventEmitter<string> = new EventEmitter<string>();
-  title: string = 'Hi, is there anything to do?';
+  placeholder: string = 'Hi, is there anything to do?';
+  title: string = '';
 
   submitValue(newTitle: string): void {
     this.submit.emit(newTitle);

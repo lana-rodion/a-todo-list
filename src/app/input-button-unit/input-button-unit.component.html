@@ -1,7 +1,3 @@
-<input
-  class="todo-input"
-  #inputElementRef
-  [value]="title"
-  (keyup.enter)="submitValue(title)"
-/>
+<input class="todo-input" #inputElementRef [value]="title" (keyup.enter)="submitValue(title)"
+  [placeholder]="placeholder" />
 <button class="btn" (click)="submitValue(inputElementRef.value)">Save</button>
